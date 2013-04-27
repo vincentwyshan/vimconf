@@ -1,10 +1,16 @@
-#!/usr/bin/env python
-#coding=utf8
-"""Install vim configration.
-    1. cp vimrc ~/.vimrc
-    2. cp -r indent ~/.vim/
-    3. cp -r syntax ~/.vim/
-    4. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    5. start vim, run "BundleInstall"
-    done.
-"""
+#!/usr/bin/env sh
+
+echo "COPY .vimrc"
+cp vimrc ~/.vimrc
+
+echo "COPY indent..."
+mkdir .vim
+cp -r indent ~/.vim/
+
+echo "COPY syntax..."
+cp -r syntax ~/.vim/
+
+echo "INSTALL vundle"
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+echo "DONE."
