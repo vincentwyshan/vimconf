@@ -26,11 +26,17 @@ set completeopt-=preview
 
 
 " global display
+" global display
+" tab-header bar
+set guioptions=b
 " remove scroll bar
+set guioptions-=l
 set guioptions-=r
+set guioptions-=b
 " disable menu, toolbar
 set guioptions-=m
 set guioptions-=T
+
 
 set number
 syntax on
