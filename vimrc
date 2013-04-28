@@ -52,7 +52,6 @@ let python_highlight_all=1
 
 
 
-
 " character
 set fileencodings=utf-8,gb18030,utf-16,big5
 
@@ -76,3 +75,8 @@ let g:pylint_onwrite = 0
 
 " buffers
 set switchbuf=usetab
+
+
+" disable menu, toolbar
+set guioptions-=m
+set guioptions-=T
