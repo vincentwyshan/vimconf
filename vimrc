@@ -14,7 +14,8 @@ Bundle 'gmarik/vundle'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'git://github.com/orenhe/pylint.vim.git'
+"Bundle 'git://github.com/orenhe/pylint.vim.git'
+Bundle 'scrooloose/syntastic'
 Bundle 'neocomplcache'
 
 " enable neocomplcache 
@@ -72,10 +73,22 @@ set laststatus=2
 
 
 " pylint configuration
-autocmd FileType python compiler pylint
-let g:pylint_onwrite = 0
+"autocmd FileType python compiler pylint
+"let g:pylint_onwrite = 0
 
 
 " buffers
 set switchbuf=usetab
+
+
+
+" syntastic
+" let g:syntastic_check_on_open = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_mode_map = { 'passive_filetypes': ['scss', 'slim'] }
+let g:syntastic_python_checkers=['pylint']
 
