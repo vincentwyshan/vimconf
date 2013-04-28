@@ -71,6 +71,16 @@ nmap <S-T> :TagbarToggle<CR>
 nmap <S-C> :SyntasticToggleMode<CR>
 
 
+" tab shortcuts
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+" shortcut for "tab drop"
+cabbrev tabd tab drop
+
+
 
 " powerline
 " always show status bar
