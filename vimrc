@@ -68,6 +68,8 @@ set fileencodings=utf-8,gb18030,utf-16,big5
 
 " my keymap
 nmap <S-T> :TagbarToggle<CR>
+nmap <S-C> :SyntasticToggleMode<CR>
+
 
 
 " powerline
@@ -90,6 +92,9 @@ set switchbuf=usetab
 
 " syntastic
 " let g:syntastic_check_on_open = 1
+let g:syntastic_mode_map = { 'mode': 'passive',
+                               \ 'active_filetypes': [],
+                               \ 'passive_filetypes': [] }
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list = 1
