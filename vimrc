@@ -21,6 +21,9 @@ Bundle 'neocomplcache'
 " enable neocomplcache 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
+" don't show scratch window
+set completeopt-=preview
+
 
 " global showing
 " remove scroll bar
