@@ -10,12 +10,11 @@ Bundle 'gmarik/vundle'
 
 
 
-" My bundle config
+" bundle manage
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/orenhe/pylint.vim.git'
-" Bundle 'AutoComplPop'
 Bundle 'neocomplcache'
 
 " enable neocomplcache 
@@ -25,9 +24,13 @@ let g:neocomplcache_enable_auto_select = 1
 set completeopt-=preview
 
 
-" global showing
+" global display
 " remove scroll bar
 set guioptions-=r
+" disable menu, toolbar
+set guioptions-=m
+set guioptions-=T
+
 set number
 syntax on
 filetype plugin on
@@ -47,28 +50,28 @@ endif
 
 set hlsearch
 
-"syntax highlight
+" syntax highlight
 let python_highlight_all=1
 
 
 
-" character
+" character encoding
 set fileencodings=utf-8,gb18030,utf-16,big5
 
 
-" My keymap
+" my keymap
 nmap <S-T> :TagbarToggle<CR>
 
 
-"powerline
-"Always show status bar
+" powerline
+" always show status bar
 set laststatus=2
 "set guifont=PowerlineSymbols\ for\ Powerline
 "set guifont=DejaVu\ Sans\ Mono
 "let g:Powerline_symbols = 'fancy'
 
 
-"pylint configuration
+" pylint configuration
 autocmd FileType python compiler pylint
 let g:pylint_onwrite = 0
 
@@ -76,7 +79,3 @@ let g:pylint_onwrite = 0
 " buffers
 set switchbuf=usetab
 
-
-" disable menu, toolbar
-set guioptions-=m
-set guioptions-=T
