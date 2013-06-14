@@ -17,6 +17,7 @@ Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 "Bundle 'git://github.com/orenhe/pylint.vim.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'neocomplcache'
+Bundle 'indenthtml.vim'
 
 " enable neocomplcache 
 let g:neocomplcache_enable_at_startup = 1
