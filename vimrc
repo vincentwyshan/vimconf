@@ -8,8 +8,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-
-
 " bundle manage
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/majutsushi/tagbar.git'
@@ -25,7 +23,6 @@ let g:neocomplcache_enable_auto_select = 1
 " don't show scratch window
 set completeopt-=preview
 
-
 " global display
 " global display
 " tab-header bar
@@ -38,13 +35,10 @@ set guioptions-=b
 set guioptions-=m
 set guioptions-=T
 
-
 set number
 syntax on
 filetype plugin on
 filetype plugin indent on 
-
-
 
 " colorscheme
 syntax enable
@@ -61,16 +55,17 @@ set hlsearch
 " syntax highlight
 let python_highlight_all=1
 
-
-
 " character encoding
 set fileencodings=utf-8,gb18030,utf-16,big5
 
+" disable tab, instead of 4 spaces 
+set shiftwidth=4
+set tabstop=4
+set expandtab
 
 " my keymap
 nmap <S-T> :TagbarToggle<CR>
 nmap <S-C> :SyntasticToggleMode<CR>
-
 
 " tab shortcuts
 nnoremap <C-J> :tabprevious<CR>
@@ -81,8 +76,6 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 " shortcut for "tab drop"
 cabbrev d tab drop
 
-
-
 " powerline
 " always show status bar
 set laststatus=2
@@ -90,16 +83,12 @@ set laststatus=2
 "set guifont=DejaVu\ Sans\ Mono
 "let g:Powerline_symbols = 'fancy'
 
-
 " pylint configuration
 "autocmd FileType python compiler pylint
 "let g:pylint_onwrite = 0
 
-
 " buffers
 set switchbuf=usetab
-
-
 
 " syntastic
 " let g:syntastic_check_on_open = 1
