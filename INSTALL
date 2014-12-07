@@ -4,11 +4,11 @@ echo "COPY .vimrc"
 cp vimrc ~/.vimrc
 
 echo "COPY indent..."
-mkdir .vim
-cp -r indent ~/.vim/
+mkdir ~/.vim
+mv indent ~/.vim/
 
 echo "COPY syntax..."
-cp -r syntax ~/.vim/
+mv syntax ~/.vim/
 
 echo "INSTALL vundle"
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
